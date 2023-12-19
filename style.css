@@ -1,0 +1,89 @@
+*{margin: 0}
+section{
+    width: 100vw;
+    height: 100vh;
+}
+#banner{
+    position: relative;
+    background: rgb(3, 3, 8);
+    z-index: 1;
+}
+.stars{
+    position: absolute;
+    z-index: 2;
+    display: inline-block;
+    background: url(images/stars.jpg) repeat;
+    width: 100vw;
+    height: 100vh;
+    animation: blink 5s infinite;
+}
+.hbodies{
+    position: absolute;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    z-index: 3;
+}
+#star{
+    background: url(images/style/4006674400.gif);
+    height: 800px;
+    width: 800px;
+    transform: translate(23vw, -1vh);
+}
+#aqua{
+    background: url(images/style/91221495.gif);
+    height: 250px;
+    width: 250px; 
+    z-index: 4;
+    transform: translate(10vw, 55vh);
+    animation: aquamotion 35s infinite;
+}
+#moon{
+    background: url(images/style/2577334272.gif);
+    height: 100px;
+    width: 100px;
+    transform: translate(5vw, 70vh);
+    z-index: 5;
+    animation: moonmotion 35s infinite;
+}
+#blackhole{
+    background: url(images/style/39577885.gif);
+    height: 150px;
+    width: 150px;
+    animation: blackholemotion 25s infinite;
+}
+
+@keyframes aquamotion{
+    0%{transform: translate(10vw, 55vh) scale(0.5,0.5);}
+    25%{transform: translate(42.5vw, 35vh) scale(1,1);}
+    50%{z-index: 4; transform: translate(75vw, 10vh) scale(0.5,0.5);}
+    75%{z-index: 3; transform: translate(42.5vw, 35vh) scale(0.25, 0.25);}
+    100%{z-index: 3; transform: translate(10vw, 55vh) scale(0.5,0.5);}
+}
+@keyframes moonmotion{
+    0%{transform: translate(5vw, 70vh) scale(0.75,0.75) rotate(90deg);}
+    25%{transform: translate(48vw, 45vh) scale(1,1) rotate(45deg);}
+    50%{z-index: 5; transform: translate(90vw, 15vh) scale(0.75,0.75);}
+    51%{z-index: 4; transform: translate(90vw, 15vh) scale(0.75,0.75);}
+    75%{z-index: 3; transform: translate(48vw, 45vh) scale(0.5,0.5) rotate(45deg);}
+    100%{z-index: 3; transform: translate(5vw, 70vh) scale(0.75,0.75) rotate(90deg);}
+}
+@keyframes blackholemotion{
+    0%{z-index: 2; transform: scale(0.1,0.1) skew(5deg, 20deg) translate(0vw,-10vh);}
+    10%{z-index: 2; transform: scale(0.3,0.3) skew(0deg, -10deg) translate(10vw, 0vh);}
+    20%{z-index: 2; transform: scale(0.6,0.6) skew(5deg, 20deg) translate(20vw, 10vh);}
+    30%{z-index: 2; transform: scale(0.9,0.9) skew(0deg, -10deg) translate(30vw, 20vh);}
+    40%{z-index: 2; transform: scale(1.2,1.2) skew(5deg, 20deg) translate(40vw, 30vh);}
+    50%{z-index: 2; transform: scale(1.50,1.50) skew(0deg, -10deg) translate(50vw, 40vh);}
+    60%{z-index: 2; transform: scale(1.2,1.2) skew(5deg, 20deg) translate(40vw, 30vh);}
+    70%{z-index: 2; transform: scale(0.9,0.9) skew(0deg, -10deg) translate(30vw, 20vh);}
+    80%{z-index: 2; transform: scale(0.6,0.6) skew(5deg, 20deg) translate(20vw, 10vh);}
+    90%{z-index: 2; transform: scale(0.3,0.3) skew(0deg, -10deg) translate(10vw, 0vh);}
+    100%{z-index: 2; transform: scale(0.1,0.1) skew(5deg, 20deg) translate(0vw,-10vh);}
+}
+@keyframes blink{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
